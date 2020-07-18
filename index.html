@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHero API</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main id="main">
+        <h1 class="title"> One stop to get info about all the superheroes</h1>
+        <span>Search: <input type="text" id="search" placeholder="Enter a Superhero's Name..." /></span>
+        <div class="loader"></div>
+        <ul class="output-list">
+            <li class="item">
+                <div class="left"><img src="./images/download (1).jpg" alt="superhero Image"></div>
+                <div class="right">
+                    <div class="name">Superman</div>
+                    <div class="real-name">Clark Kent</div>
+                    <div class="address">The city of Metropolis, U.S.A.</div>
+                    <div class="buttons"> 
+                        <button class="btn add-to-favorites">Add to favourites</button>
+                        <button class="btn remove-from-favourites">Remove from favourites</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="notification"></div>
+    </main>
+    <script src ="js/script.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+</html>
