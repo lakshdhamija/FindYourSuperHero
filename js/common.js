@@ -53,20 +53,7 @@ const Common = (function(){
             };
         }
     }
-    function debounce(func, delay){
-        let timeout;
-        return  function(){
-            const context = this;
-            const args = arguements;
-            console.log('args', args);
-            clearTimeout(timeout);
-            timeout = setTimeout(function(){
-                timeout = null;
-                func.apply(context, args);
-            }, delay);
-        };
-    }
     return{
-        sendReq, apiUrl, sendNotif, getFav, addToFav, removeFromFav, debounce
+        sendReq, apiUrl, sendNotif, getFav, addToFav, removeFromFav
     }
 })();
