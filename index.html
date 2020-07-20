@@ -5,29 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperHero API</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/c18f6677f5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <nav>
+        <a href="./"><i class="fas fa-mask"></i> Superhero API</a>
+        <a href="./favorites.html"><i class="fas fa-bookmark"></i> Favorites</a>
+    </nav>
     <main id="main">
         <h1 class="title"> One stop to get info about all the superheroes</h1>
-        <span>Search: <input type="text" id="search" placeholder="Enter a Superhero's Name..." /></span>
-        <div class="loader"></div>
-        <ul class="output-list">
-            <li class="item">
+        <span id="search-span">Search: <input type="text" id="search" placeholder="Enter a Superhero's Name..." /></span>
+        <div class="notification"></div>
+        <ul class="output-list"> 
+            
+            <!-- <li class="item">
                 <div class="left"><img src="./images/download (1).jpg" alt="superhero Image"></div>
                 <div class="right">
-                    <div class="name">Superman</div>
+                    <a href=""><div class="name">Superman</div></a>
                     <div class="real-name">Clark Kent</div>
                     <div class="address">The city of Metropolis, U.S.A.</div>
                     <div class="buttons"> 
-                        <button class="btn add-to-favorites">Add to favourites</button>
-                        <button class="btn remove-from-favourites">Remove from favourites</button>
+                        <button class="btn add-to-favorites">Add to favorites</button>
+                        <button class="btn remove-from-favorites">Remove from favorites</button>
                     </div>
                 </div>
-            </li>
+            </li> -->
+            
         </ul>
-        <div class="notification"></div>
     </main>
-    <script src ="js/script.js"></script>
+    
     <script src="./js/common.js"></script>
+    <script src ="./js/index.js"></script>
+    <script>
+        Index.start();
+    </script>
 </body>
 </html>

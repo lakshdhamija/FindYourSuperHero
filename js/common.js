@@ -1,16 +1,9 @@
 const Common = (function(){
     const token = 10213278264309612;
     const apiUrl = `https://www.superheroapi.com/api.php/${token}/`;
-    const loader = document.querySelector('.loader');
     const notifContainer = document.querySelector('.notification');
     const FAVARRAY = 'favs';
 
-    function showLoader(){
-        loader.style.display = 'block';
-    }
-    function hideLoader(){
-        loader.style.display = 'none';
-    }
     function sendNotif(notif, type){ // funtion to show notifications
         if(type === 'red'){
             notifContainer.classList.remove('green');
@@ -23,7 +16,7 @@ const Common = (function(){
         notifContainer.textContent = notif;
         setTimeout(() => { // remove container after 5s
             notifContainer.style.display = 'none';
-        }, 5000);
+        }, 1000);
     }
     function getFav(){
         const heros = localStorage.getItem(FAVARRAY);
@@ -40,10 +33,7 @@ const Common = (function(){
     function removeFromFav(hero){
         if(!hero) return;
         let favHeroes = getFav();
-        favHeroes = favHeroes.filter((item) => {
-            item.id === hero
-        });
-
+        favHeroes = favHeroes.filter(item => item.id !== hero);
         localStorage.setItem(FAVARRAY, JSON.stringify(favHeroes));
     }
 
@@ -77,6 +67,6 @@ const Common = (function(){
         };
     }
     return{
-        sendReq, apiUrl, showLoader, hideLoader, sendNotif, getFav, addToFav, removeFromFav, debounce
+        sendReq, apiUrl, sendNotif, getFav, addToFav, removeFromFav, debounce
     }
-});
+})();
