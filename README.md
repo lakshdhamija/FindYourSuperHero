@@ -18,10 +18,11 @@
 
 ## Description
 
-This front end makes use of superheroApi and can perform the following functions :-
-1. Search for superhero as you type the name.
-2. Add/Remove Superhero from Favorites.
-3. Click on Superhero Name to see detailed stats page of the Superhero.
+This front end makes use of superheroApi and can perform the following functions:-
+
+Search for a superhero as you type the name.
+Add/Remove Superhero from Favorites.
+Click on Superhero Name to see the detailed stats page of the Superhero.
 
 #### Technologies
 
